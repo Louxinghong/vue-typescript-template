@@ -7,8 +7,22 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: Home
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () =>
+      import(/* webpackChunkName: 'group-login' */ '@/views/login/index.vue')
+  },
+  {
+    path: '/dashboard',
+    name: 'Dashboard',
+    component: () =>
+      import(
+        /* webpackChunkName: 'group-dashboard' */ '@/views/dashboard/index.vue'
+      )
   }
 ]
 
