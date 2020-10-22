@@ -6,8 +6,16 @@ module.exports = {
   globals: {
     saveAs: true
   },
-  extends: ['plugin:vue/essential', '@vue/standard', '@vue/typescript'],
-  rules: {},
+  extends: [
+    'prettier',
+    'prettier/@typescript-eslint',
+    'plugin:vue/essential',
+    '@vue/standard',
+    '@vue/typescript'
+  ],
+  rules: {
+    'space-before-function-paren': [0, 'always'] // 函数定义时括号前面要不要有空格
+  },
   parserOptions: {
     parser: '@typescript-eslint/parser'
   }

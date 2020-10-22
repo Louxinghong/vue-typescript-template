@@ -47,7 +47,7 @@ export default class Login extends Vue {
     ]
   }
 
-  private onSubmit () {
+  private onSubmit() {
     ;(this.$refs.form as ElForm).validate(async (valid: boolean) => {
       if (valid) {
         try {
@@ -55,6 +55,8 @@ export default class Login extends Vue {
           this.$router.replace({ name: 'Home' })
           this.loading = false
         } catch (error) {
+          this.loading = false
+        } finally {
           this.loading = false
         }
       }

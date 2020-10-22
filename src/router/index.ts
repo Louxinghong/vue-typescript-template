@@ -4,12 +4,7 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
+const routes: Array<any> = [
   {
     path: '/login',
     name: 'Login',
@@ -17,12 +12,17 @@ const routes = [
       import(/* webpackChunkName: 'group-login' */ '@/views/login/index.vue')
   },
   {
-    path: '/dashboard',
+    path: '/',
     name: 'Dashboard',
     component: () =>
       import(
         /* webpackChunkName: 'group-dashboard' */ '@/views/dashboard/index.vue'
       )
+  },
+  {
+    path: '/Home-test',
+    name: 'Home',
+    component: Home
   }
 ]
 
