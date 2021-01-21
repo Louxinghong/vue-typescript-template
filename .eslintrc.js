@@ -10,7 +10,7 @@ module.exports = {
     'prettier',
     'prettier/@typescript-eslint',
     'plugin:vue/essential',
-    '@vue/standard',
+
     '@vue/typescript'
   ],
   rules: {

@@ -1,9 +1,13 @@
 <template>
-  <div class="main-container"></div>
+  <div class="main-container">
+    <router-view />
+  </div>
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   name: 'MainContainer'
-}
+})
 </script>

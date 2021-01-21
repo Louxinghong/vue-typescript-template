@@ -1,10 +1,7 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Layout from '@/components/layout/index.vue'
 
-Vue.use(VueRouter)
-
-const routes: Array<any> = [
+const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     redirect: '/dashboard',
@@ -15,7 +12,7 @@ const routes: Array<any> = [
         name: 'DashBoard',
         component: () =>
           import(
-            /* webpackChunkName: 'group-dashboard' */ '@/views/dashboard/index.vue'
+            /* webpackChunkName: 'group-dashboard' */ '@/views/dashboard/dashboard.vue'
           ),
         meta: { title: '首页', icon: '' }
       }
@@ -23,7 +20,8 @@ const routes: Array<any> = [
   }
 ]
 
-const router = new VueRouter({
+const router = createRouter({
+  history: createWebHashHistory(),
   routes
 })
 

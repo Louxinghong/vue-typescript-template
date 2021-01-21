@@ -7,9 +7,9 @@
 </template>
 
 <script lang="ts">
-import SideBar from '@/components/side-bar/SideBar.vue'
-import NavBar from '@/components/nav-bar/NavBar.vue'
-import MainContainer from '@/components/main-container/MainContainer.vue'
+import SideBar from '@/components/layout/side-bar/SideBar.vue'
+import NavBar from '@/components/layout/nav-bar/NavBar.vue'
+import MainContainer from '@/components/layout/main-container/MainContainer.vue'
 
 export default {
   name: 'Layout',
